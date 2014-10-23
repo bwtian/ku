@@ -202,7 +202,7 @@
 \section{R Code Chunk Options}
 <<chunkOptionsTemp, echo=TRUE, eval=FALSE>>=
 @
-\section{R Variables and Fuctions in this Dissertaion}
+\section{R Variables and Fuctions in the Dissertaion}
 <<phdFunctions, echo=TRUE, eval=FALSE>>=
 @
 \end{appendices}
