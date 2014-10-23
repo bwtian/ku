@@ -1,0 +1,66 @@
+% \maketitle
+% \tableofcontents
+% \listoffigures
+
+<<chunkOptionsTemp, echo=FALSE, eval=TRUE>>=
+library(knitr)
+### Speed  Up
+options(replace.assign=TRUE, width = 80, digits = 5, max.print=80)
+#  replace "=" with "<-"
+#  R output can go to 72 characters per line before wrapping
+#  print 3 significant digits,
+#  If I ask to see a big matrix or something, only show 72 lines
+### Fontsize: tell knitr to use smaller font for code chunks
+opts_chunk$set(size='footnotesize')
+
+### Cache
+opts_chunk$set(cache = TRUE)
+opts_chunk$set(cache.path = "/home/tian/Dropbox/2data/cache/")
+
+### Figure Setup
+opts_chunk$set(fig.path = "/home/tian/Dropbox/3figs/Rnw_PDF/Fig-")
+opts_chunk$set(dev = "pdf") # 0:pdf O:png
+#opts_chunk$set(fig.width = 8, )
+opts_chunk$set(fig.align='center')
+opts_chunk$set(fig.show='hold') #0: behind text, 1:hold in asis
+opts_template$set(
+  fig.3by3 = list(fig.width = 3, fig.height = 3),
+  fig.5by5 = list(fig.width = 5, fig.height = 5),
+  fig.6by3 = list(fig.width = 6, fig.height = 3),
+  fig.6by4 = list(fig.width = 6, fig.height = 4),
+  fig.6by5 = list(fig.width = 6, fig.height = 5),
+  fig.6by6 = list(fig.width = 6, fig.height = 6),
+  fig.7by4 = list(fig.width = 7, fig.height = 4),
+  fig.7by5 = list(fig.width = 7, fig.height = 5),
+  fig.7by6 = list(fig.width = 7, fig.height = 6),
+  fig.7by7 = list(fig.width = 7, fig.height = 7)
+)
+### Tidy and Wrap and Highlight(Code Color)
+opts_chunk$set(concordance=TRUE)
+### Long Line
+#opts_chunk$set(tidy=TRUE)
+#opts_knit$set(progress = F, verbose = F)
+### export formats
+opts_chunk$set(highlight=TRUE) # 0:TRUE
+## nocode
+opts_chunk$set(echo=FALSE) # 0: TRUE
+## no results
+#opts_chunk$set(eval=FALSE) # control the export 0:TRUE, with figures
+## no coments sign
+opts_chunk$set(prompt=FALSE) # 0:TRUE >
+opts_chunk$set(comment=NA)  # 0:##
+opts_chunk$set(message=FALSE) #0:TRUE
+opts_chunk$set(warning=FALSE)
+opts_chunk$set(error=FALSE)
+@
+
+
+%% %% replace by opts_chunk$set(size)
+%% \ifdefined\knitrout
+%% \renewenvironment{knitrout}{\begin{footnotesize}}{\end{footnotesize}}
+%% \else
+%% \fi
+%% Make sure line spacing isn't changed in knitr output
+% \renewenvironment{knitrout}{\begin{singlespace}}{\end{singlespace}}
+% %% Define R example environment
+% \newtheorem{rexample}{R Example}[section]
