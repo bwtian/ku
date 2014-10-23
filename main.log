@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.4)  23 OCT 2014 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.4)  23 OCT 2014 15:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -822,27 +822,135 @@ Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 
 
 Writing index file main.idx
+) (./PREAMBLE/preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+)
+\c@ContinuedFloat=\count138
+Package caption Info: hyperref package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count139
+\c@subtable=\count140
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen130
+\lightrulewidth=\dimen131
+\cmidrulewidth=\dimen132
+\belowrulesep=\dimen133
+\belowbottomsep=\dimen134
+\aboverulesep=\dimen135
+\abovetopsep=\dimen136
+\cmidrulesep=\dimen137
+\cmidrulekern=\dimen138
+\defaultaddspace=\dimen139
+\@cmidla=\count141
+\@cmidlb=\count142
+\@aboverulesep=\dimen140
+\@belowrulesep=\dimen141
+\@thisruleclass=\count143
+\@lastruleclass=\count144
+\@thisrulewidth=\dimen142
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen143
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip59
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count145
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count146
+\leftroot@=\count147
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count148
+\DOTSCASE@=\count149
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count150
+\c@MaxMatrixCols=\count151
+\dotsspace@=\muskip11
+\c@parentequation=\count152
+\dspbrk@lvl=\count153
+\tag@help=\toks21
+\row@=\count154
+\column@=\count155
+\maxfields@=\count156
+\andhelp@=\toks22
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks23
+\multlinegap=\skip60
+\multlinetaggap=\skip61
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 
-! LaTeX Error: File `PREAMBLE/Preamble.tex' not found.
+! LaTeX Error: File `siunitx.sty' not found.
 
 Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: tex)
+or enter new name. (Default extension: sty)
 
 Enter file name: 
 ! Emergency stop.
 <read *> 
          
-l.8 \input{PREAMBLE/Preamble}
-                             ^^M
+l.73 ^^M
+        
 *** (cannot \read from terminal in nonstop modes)
 
  
 Here is how much of TeX's memory you used:
- 11300 strings out of 494985
- 156730 string characters out of 6180357
- 236710 words of memory out of 5000000
- 14369 multiletter control sequences out of 15000+600000
+ 13207 strings out of 494985
+ 185449 string characters out of 6180357
+ 265901 words of memory out of 5000000
+ 16238 multiletter control sequences out of 15000+600000
  4702 words of font info for 16 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  49i,0n,45p,1012b,38s stack positions out of 5000i,500n,10000p,200000b,80000s
