@@ -1,0 +1,266 @@
+* TODO [[file:./Dissertation.Rnw][ Dissertation]]   [[file:Dissertation.pdf][pdf]]
+  - State "TODO"       from ""           [2014-08-18 Mon 21:36]
+* TOP MATTER
+** TODO [[file:./OPTIONS/options.Rnw][Options]]
+:PROPERTIES:
+:CUSTOM_ID: Options
+:END:
+
+
+#+INCLUDE: "./OPTIONS/options.Rnw"
+** TODO [[file:./PREAMBLE/preamble.Rnw][Preamble]]
+:PROPERTIES:
+:CUSTOM_ID: Preamble
+:END:
+
+
+#+INCLUDE: "./PREAMBLE/preamble.Rnw"
+** TODO [[file:./COVER/cover.Rnw][Cover]]
+:PROPERTIES:
+:CUSTOM_ID: Cover
+:END:
+
+
+#+INCLUDE: "./COVER/cover.Rnw"
+
+* FRONT MATTER
+** DONE [[file:TITLE/Title.tex][Title]]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:31]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:31]
+:PROPERTIES:
+:CUSTOM_ID: Title
+:END:
+
+** DONE [[file:./DEDICATION/dedication.Rnw][Dedication]]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:31]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:31]
+  - State "TODO"       from ""           [2014-08-18 Mon 21:31]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:31]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:31]
+:PROPERTIES:
+:CUSTOM_ID: Dedication
+:END:
+
+
+#+INCLUDE: "./DEDICATION/dedication.Rnw"
+** DONE [[file:./DECLARATION/declaration.Rnw][Declaration]]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:31]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:31]
+  - State "TODO"       from ""           [2014-08-18 Mon 21:31]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:31]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:31]
+:PROPERTIES:
+:CUSTOM_ID: Declaration
+:END:
+
+
+#+INCLUDE: "./DECLARATION/declaration.Rnw"
+** TODO [[file:./PREFACE/preface.Rnw][Preface]]
+:PROPERTIES:
+:CUSTOM_ID: Preface
+:END:
+
+
+#+INCLUDE: "./PREFACE/preface.Rnw"
+** TODO [[file:./ACKNOWLEDGMENT/acknowledgment.Rnw][Acknowledgment]]
+:PROPERTIES:
+:CUSTOM_ID: Acknowledgment
+:END:
+
+
+#+INCLUDE: "./ACKNOWLEDGMENT/acknowledgment.Rnw"
+** TODO [[file:./TABLEOFCONTENTS/tableofcontents.Rnw][Tableofcontents]]
+:PROPERTIES:
+:CUSTOM_ID: Tableofcontents
+:END:
+
+
+#+INCLUDE: "./TABLEOFCONTENTS/tableofcontents.Rnw"
+** TODO [[file:./FIGURESLIST/figureslist.Rnw][Figureslist]]
+:PROPERTIES:
+:CUSTOM_ID: Figureslist
+:END:
+
+
+#+INCLUDE: "./FIGURESLIST/figureslist.Rnw"
+** TODO [[file:./TABLESLIST/tableslist.Rnw][Tableslist]]
+:PROPERTIES:
+:CUSTOM_ID: Tableslist
+:END:
+
+
+#+INCLUDE: "./TABLESLIST/tableslist.Rnw"
+** TODO [[file:./SOFTWARESLIST/softwareslist.Rnw][SoftwaresList]]
+:PROPERTIES:
+:CUSTOM_ID: SoftwaresList
+:END:
+
+
+#+INCLUDE: "./SOFTWARESLIST/softwareslist.Rnw"
+** TODO [[file:./GLOSSAIESLIST/glossaieslist.Rnw][Glossaieslist]]
+:PROPERTIES:
+:CUSTOM_ID: Glossaieslist
+:END:
+
+
+#+INCLUDE: "./GLOSSAIESLIST/glossaieslist.Rnw"
+** TODO [[file:./ACRONYMLIST/acronymlist.Rnw][Acronymlist]]
+:PROPERTIES:
+:CUSTOM_ID: Acronymlist
+:END:
+
+
+#+INCLUDE: "./ACRONYMLIST/acronymlist.Rnw"
+** TODO [[file:./SYMBOLSLIST/symbolslist.Rnw][Symbolslist]]
+:PROPERTIES:
+:CUSTOM_ID: Symbolslist
+:END:
+
+
+#+INCLUDE: "./SYMBOLSLIST/symbolslist.Rnw"
+** [[file:./ABSTRACT/abstract.Rnw][Abstract]]
+  - State "DONE"       from "DOING"      [2014-08-18 Mon 21:34]
+  - State "DOING"      from "TODO"       [2014-08-18 Mon 21:34]
+:PROPERTIES:
+:CUSTOM_ID: Abstract
+:END:
+
+
+#+INCLUDE: "./ABSTRACT/abstract.Rnw"
+
+* MAIN MATTER
+* TODO 1 [[file:./INTRODUCTION/introduction.tex][Introduction]]
+  - State "TODO"       from ""           [2014-08-18 Mon 21:54]
+:PROPERTIES:
+:CUSTOM_ID: Introduction
+:END:
+#+BEGIN_SRC dot :file ./FIGURES/11_Structure.png
+digraph {
+node [shape = plaintext]
+ranksep = 0.5
+1 [label = "1. Introduction " ]
+2 [label = "2. Background and Literature Review"]
+3 [label = "3. Geothermal Remote Sensing" ]
+4 [label = "4. Spatial Data and Coordinate"] 
+5 [label = "5. Surface Temperature Retrieving"] 
+6 [label = "6. Subsurface Temperature 3D Modeling"] 
+7 [label = "7. Geothermal In Japan and Discussion"]
+8 [label = "8. Conclusion" ]
+9 [label = "9. Future Work"]
+1 -> 2 [label = " 1.1 Dissertation Strcture\l 1.2 Main Contribution\l "]
+2 -> 3 [label = " 2.1 Geography\l 2.2 Geology \l"]
+3 -> 4 [label = " 3.1 Review\l 3.2 Satellite Data\l"]
+4 -> 5 [label = " 4.1 GIS Data\l 4.2 Coordinate Systems\l"]
+5 -> 6 [label = " 5.1 Review\l 5.2 Satellite Data\l"]
+6 -> 7 [label = " 6.1 Review\l 6.2 Satellite Data\l"]
+7 -> 8 [label = " 7.1 Review\l 7.2 Satellite Data\l"]
+8 -> 9 [label = " 8.1 Review\l 8.2 Satellite Data\l"]
+}
+#+END_SRC
+
+#+RESULTS:
+[[file:./FIGURES/11_Structure.png]]
+
+#+INCLUDE: "./INTRODUCTION/introduction.Rnw"
+* TODO 2 [[file:./LITERATUREREVIEW/literaturereview.Rnw][LiteratureReview]]
+:PROPERTIES:
+:CUSTOM_ID: LiteratureReview
+:END:
+
+
+#+INCLUDE: "./LITERATUREREVIEW/literaturereview.Rnw"
+* TODO [[file:./BACKGROUD/backgroud.Rnw][3 Backgroud]]
+:PROPERTIES:
+:CUSTOM_ID: Backgroud
+:END:
+
+
+#+INCLUDE: "./BACKGROUD/backgroud.Rnw"
+* TODO [[file:./DATA/data.Rnw][4 Data]]
+:PROPERTIES:
+:CUSTOM_ID: Data
+:END:
+
+
+#+INCLUDE: "./DATA/data.Rnw"
+* TODO [[file:./CHAP1/chap1.Rnw][5 Chap1]]
+:PROPERTIES:
+:CUSTOM_ID: Chap1
+:END:
+
+
+#+INCLUDE: "./CHAP1/chap1.Rnw"
+* TODO [[file:./CHAP2/chap2.Rnw][6 Chap2]]
+:PROPERTIES:
+:CUSTOM_ID: Chap2
+:END:
+
+
+#+INCLUDE: "./CHAP2/chap2.Rnw"
+* TODO 7 [[file:./DISCUSSION/discussion.Rnw][Discussion]]
+:PROPERTIES:
+:CUSTOM_ID: Discussion
+:END:
+
+
+#+INCLUDE: "./DISCUSSION/discussion.Rnw"
+* TODO [[file:./CONCLUSION/conclusion.Rnw][8 Conclusion]]
+:PROPERTIES:
+:CUSTOM_ID: Conclusion
+:END:
+
+
+#+INCLUDE: "./CONCLUSION/conclusion.Rnw"
+* TODO [[file:./FUTURE/futurework.Rnw][9 Futurework]]
+:PROPERTIES:
+:CUSTOM_ID: Conclusion
+:END:
+
+
+#+INCLUDE: "./CONCLUSION/conclusion.Rnw"
+* TODO [[file:./REFERENCE/reference.Rnw][Reference]]
+:PROPERTIES:
+:CUSTOM_ID: Reference
+:END:
+
+
+#+INCLUDE: "./REFERENCE/reference.Rnw"
+* END MATTER
+** TODO [[file:./APPENDIX/appendix.Rnw][Appendix]]
+:PROPERTIES:
+:CUSTOM_ID: Appendix
+:END:
+
+
+#+INCLUDE: "./APPENDIX/appendix.Rnw"
+** TODO [[file:./INDEX/index.Rnw][Index]]
+:PROPERTIES:
+:CUSTOM_ID: Index
+:END:
+
+
+#+INCLUDE: "./INDEX/index.Rnw"
+** TODO [[file:./FIGURES/figures.Rnw][Figures]]
+:PROPERTIES:
+:CUSTOM_ID: Figures
+:END:
+
+
+#+INCLUDE: "./FIGURES/figures.Rnw"
+** TODO [[file:./CV/cv.Rnw][Cv]]
+:PROPERTIES:
+:CUSTOM_ID: Cv
+:END:
+
+
+#+INCLUDE: "./CV/cv.Rnw"
+** TODO [[file:./RESUME/resume.Rnw][Resume]]
+:PROPERTIES:
+:CUSTOM_ID: Resume
+:END:
+
+
+#+INCLUDE: "./RESUME/resume.Rnw"
+* Note                                                             :noexport:
+** <2014-08-18 Mon>
+   - installed texlive-science

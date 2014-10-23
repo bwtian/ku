@@ -1,0 +1,50 @@
+#+OPTIONS: ^:{} 
+
+* Variables
+Radiant
+|--------------+-------------+------------------------------+------------|
+| Radiant      | Symbol      | Units                        | Definition |
+|--------------+-------------+------------------------------+------------|
+| Energy       | Q_{rad}     | Joules(J)                    |            |
+| Flux         | \Phi_{rad}  | Watts(W = J s^{-1})          |            |
+| Flux density | M_{rad}     | W m^{-2}                     |            |
+| Exitance     | M           | W m^{-2}                     |            |
+| Irradiance   | E           | W m^{-2}                     |            |
+| Intensity    | I           | W sr^{-1}                    |            |
+| Radiance     | L           | W sr^{-1} m^{-1}             |            |
+|              | L_{\lambda} | W sr^{-1} m^{-1} \mu{}m^{-1} |            |
+|--------------+-------------+------------------------------+------------|
+
+Spectral Radiance
+|---------------+----------+-----------------------+---------------------------+-------------|
+| Radiance      | Symbol   | Definition            | Other Symbol              | Value Range |
+|---------------+----------+-----------------------+---------------------------+-------------|
+| At Sensor     | L_{sat}  |                       | L_{obs}, L_{sensor}       |             |
+| At Atmosphere | L_{up}   | up-welling radiance   | L^{\uparrow}_{atm}, L_{u} |             |
+| At Atmosphere | L_{down} | down-welling radiance | L^{\downarrow}_{atm}      |             |
+| At Surface    | L_{surf} |                       | L_{G}                     |             |
+|---------------+----------+-----------------------+---------------------------+-------------|
+
+
+
+
+Temperature
+|        | Symbol | Definition |   |   |
+|--------+--------+------------+---+---|
+| At TOA | T_{B}  |            |   |   |
+
+* Principles
+
+** Planck's law
+
+#+BEGIN_EQUATION
+M(\lambda, T) = 2\pi{}hc^{2}\lambda^{-5}[exp^{frac{hc}\lambda{}kT}-1]^{-1}
+#+END_EQUATION
+
+** Wein's Displacement Law
+#+BEGIN_EQUATION
+\lambda_{m} = A \ T (\mu{}m)
+#+END_EQUATION
+
+
+** The Krichoff Radiation Law

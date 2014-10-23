@@ -1,0 +1,9 @@
+\thispagestyle {empty}
+\contentsline {chapter}{Table of contents}{vii}{chapter*.3}
+\contentsline {chapter}{List of figures}{ix}{chapter*.4}
+\contentsline {chapter}{List of tables}{xi}{chapter*.5}
+\contentsline {chapter}{Nomenclature}{xi}{chapter*.5}
+\contentsline {chapter}{References}{3}{chapter*.6}
+\contentsline {chapter}{Appendix \numberline {A}R Code of Preamble}{5}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}R Code Chunk Options}{5}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}R Variables and Fuctions in this Dissertaion}{6}{section.a.A.2}

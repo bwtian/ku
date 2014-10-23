@@ -1,0 +1,712 @@
+\documentclass[a4paper,12pt,times,numbered,print,index]{Classes/PhDThesisPSnPDF}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{OPTIONS/options}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \maketitle
+% \tableofcontents
+% \listoffigures
+
+
+
+
+%% %% replace by opts_chunk$set(size)
+%% \ifdefined\knitrout
+%% \renewenvironment{knitrout}{\begin{footnotesize}}{\end{footnotesize}}
+%% \else
+%% \fi
+%% Make sure line spacing isn't changed in knitr output
+\renewenvironment{knitrout}{\begin{singlespace}}{\end{singlespace}}
+%% Define R example environment
+\newtheorem{rexample}{R Example}[section]
+
+%% Latex Setting
+\usepackage{times}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{PREAMBLE/preamble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%<<Preamble, child = "./PREAMBLE/preamble.Rnw">>=
+%%@
+\input{PREAMBLE/Preamble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{COVER/cover}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{TITLE/title}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{TITLE/Title}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start of Document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \frontmatter
+%% \input or \include{DEDICATION/dedication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+%% \include{Dedication/dedication}
+\include{DECLARATION/declaration}
+\include{ACKNOWLEDGMENT/acknowledgment}
+\include{ABSTRACT/abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Adding TOC and List of Figures, Tables, Glossaries...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\listoffigures
+\listoftables
+% \printnomenclature[space] space can be set as 2.5cm between symbol and
+% description
+\printnomencl
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \mainmatter %% Include of Main Matter Chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{DECLARATION/declaration}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{PREFACE/preface}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{ACKNOWLEDGMENT/acknowledgment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{TABLEOFCONTENTS/tableofcontents}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{FIGURESLIST/figureslist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{TABLESLIST/tableslist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{SOFTWARESLIST/softwareslist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{GLOSSAIESLIST/glossaieslist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{ACRONYMLIST/acronymlist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{SYMBOLSLIST/symbolslist}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{ABSTRACT/abstract}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{INTRODUCTION/introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{LITERATUREREVIEW/literaturereview}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{BACKGROUD/backgroud}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{DATA/data}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CHAP1/chap1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CHAP2/chap2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CHAP3/chap3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CHAP4/chap4}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CHAP5/chap5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{DISCUSSION/discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CONCLUSION/conclusion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{REFERENCE/reference}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ test\cite{Teng2007}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Backmatter :Bibliography,
+%%\backmatter %should be commented out, if you are using appendices after References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Bibliography -------------------------------------------------------
+\begin{spacing}{0.9}
+% To use the conventional natbib style referencing
+% Bibliography style previews: http://nodonn.tipido.net/bibstyle.php
+% Reference styles: http://sites.stat.psu.edu/~surajit/present/bib.htm
+
+\bibliographystyle{abbrvnat}
+%% \bibliographystyle{apalike}
+%% \bibliographystyle{plainnat} % use this to have URLs listed in References
+\cleardoublepage
+\bibliography{/home/tian/Dropbox/4refs/bib/phdThesis}
+% If you would like to use BibLaTeX for your references, pass `custombib' as
+% an option in the document class. The location of 'reference.bib' should be
+% specified in the preamble.tex file in the custombib section.
+% Comment out the lines related to natbib above and uncomment the following line.
+
+%\printbibliography[heading=bibintoc, title={References}]
+
+\end{spacing}
+
+
+%% Appendix-------------------------------------------------------------------
+
+\begin{appendices} % Using appendices environment for more functunality
+\chapter{R Code of Preamble}
+\section{R Code Chunk Options}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(knitr)}
+\hlcom{### Speed  Up}
+\hlkwd{options}\hlstd{(}\hlkwc{replace.assign}\hlstd{=}\hlnum{TRUE}\hlstd{,} \hlkwc{width} \hlstd{=} \hlnum{80}\hlstd{,} \hlkwc{digits} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{max.print}\hlstd{=}\hlnum{80}\hlstd{)}
+\hlcom{#  replace "=" with "<-"}
+\hlcom{#  R output can go to 72 characters per line before wrapping}
+\hlcom{#  print 3 significant digits,}
+\hlcom{#  If I ask to see a big matrix or something, only show 72 lines}
+\hlcom{### Fontsize: tell knitr to use smaller font for code chunks}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{size}\hlstd{=}\hlstr{'footnotesize'}\hlstd{)}
+
+\hlcom{### Cache}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{cache} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{cache.path} \hlstd{=} \hlstr{"/home/tian/Dropbox/2data/cache/"}\hlstd{)}
+
+\hlcom{### Figure Setup}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{fig.path} \hlstd{=} \hlstr{"/home/tian/Dropbox/3figs/Rnw_PDF/Fig-"}\hlstd{)}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{dev} \hlstd{=} \hlstr{"pdf"}\hlstd{)} \hlcom{# 0:pdf O:png}
+\hlcom{#opts_chunk$set(fig.width = 8, )}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{fig.align}\hlstd{=}\hlstr{'center'}\hlstd{)}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{fig.show}\hlstd{=}\hlstr{'hold'}\hlstd{)} \hlcom{#0: behind text, 1:hold in asis}
+\hlstd{opts_template}\hlopt{$}\hlkwd{set}\hlstd{(}
+  \hlkwc{fig.3by3} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{3}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{3}\hlstd{),}
+  \hlkwc{fig.5by5} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{5}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{5}\hlstd{),}
+  \hlkwc{fig.6by3} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{6}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{3}\hlstd{),}
+  \hlkwc{fig.6by4} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{6}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{4}\hlstd{),}
+  \hlkwc{fig.6by5} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{6}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{5}\hlstd{),}
+  \hlkwc{fig.6by6} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{6}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{6}\hlstd{),}
+  \hlkwc{fig.7by4} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{7}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{4}\hlstd{),}
+  \hlkwc{fig.7by5} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{7}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{5}\hlstd{),}
+  \hlkwc{fig.7by6} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{7}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{6}\hlstd{),}
+  \hlkwc{fig.7by7} \hlstd{=} \hlkwd{list}\hlstd{(}\hlkwc{fig.width} \hlstd{=} \hlnum{7}\hlstd{,} \hlkwc{fig.height} \hlstd{=} \hlnum{7}\hlstd{)}
+\hlstd{)}
+\hlcom{### Tidy and Wrap and Highlight(Code Color)}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{concordance}\hlstd{=}\hlnum{TRUE}\hlstd{)}
+\hlcom{### Long Line}
+\hlcom{#opts_chunk$set(tidy=TRUE)}
+\hlcom{#opts_knit$set(progress = F, verbose = F)}
+\hlcom{### export formats}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{highlight}\hlstd{=}\hlnum{TRUE}\hlstd{)} \hlcom{# 0:TRUE}
+\hlcom{## nocode}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{echo}\hlstd{=}\hlnum{FALSE}\hlstd{)} \hlcom{# 0: TRUE}
+\hlcom{## no results}
+\hlcom{#opts_chunk$set(eval=FALSE) # control the export 0:TRUE, with figures}
+\hlcom{## no coments sign}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{prompt}\hlstd{=}\hlnum{FALSE}\hlstd{)} \hlcom{# 0:TRUE >}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{comment}\hlstd{=}\hlnum{NA}\hlstd{)}  \hlcom{# 0:##}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{message}\hlstd{=}\hlnum{FALSE}\hlstd{)} \hlcom{#0:TRUE}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{warning}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\hlstd{opts_chunk}\hlopt{$}\hlkwd{set}\hlstd{(}\hlkwc{error}\hlstd{=}\hlnum{FALSE}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\section{R Variables and Fuctions in this Dissertaion}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{###############################################################################}
+\hlcom{## R code chunk: Phd Thesis Variables and Functions}
+\hlcom{###############################################################################}
+\hlcom{# Extent of Study area of Japan in Phd Thesis}
+\hlstd{xlimJP} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{128.5}\hlstd{,} \hlnum{146.5}\hlstd{)}
+\hlstd{ylimJP} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{30.2}\hlstd{,} \hlnum{45.8}\hlstd{)}
+\hlstd{certerJp} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{137.5}\hlstd{,} \hlnum{38}\hlstd{)}
+
+\hlcom{# Coordinate Reference Systems of Japan}
+\hlcom{## Geographic Coordinate Reference Systems}
+\hlcom{#tokyoGRS <- "+init=epsg:4301"}
+\hlstd{tokyoGRS}  \hlkwb{<-} \hlstr{"+proj=longlat +ellps=bessel +no_defs"}
+\hlcom{#wgs84GRS <- "+init=epsg:4326"}
+\hlstd{wgs84GRS}  \hlkwb{<-}\hlstr{"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs +towgs84=0,0,0"}
+\hlcom{#jgd2000GRS <- "+init=epsg:4612"}
+\hlstd{jgd2000GRS}  \hlkwb{<-} \hlstr{"+proj=longlat +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +no_defs"}
+
+\hlcom{## Projected Coordinate Reference Systems}
+\hlstd{lccBessel} \hlkwb{<-} \hlstr{"+proj=lcc +lat_1=32.8 +lat_2=43.2 +lat_0=38 +lon_0=137.5 +x_0=1000000 +y_0#=1000000 +ellps=bessel +towgs84=-146.414,507.337,680.507,0,0,0,0 +units=m +no_defs"}
+\hlcom{## change the datum to WGS84 20140508}
+\hlstd{lccWgs84} \hlkwb{<-} \hlstr{"+proj=lcc +lat_1=32.8 +lat_2=43.2 +lat_0=38 +lon_0=137.5 +x_0=1000000 +y_0=1000000 +datum=WGS84 +units=m +no_defs"}
+\hlcom{#  +ellps=WGS84 +towgs84=0,0,0}
+
+\hlstd{codeDir} \hlkwb{<-} \hlstr{"~/Dropbox/1code"}
+\hlstd{dataDir} \hlkwb{<-} \hlstr{"~/Dropbox/2data"}
+\hlstd{dataData} \hlkwb{<-} \hlstr{"~/Dropbox/2data/data"}
+\hlstd{dataRaw} \hlkwb{<-} \hlstr{"~/Dropbox/2data/dataRaw"}
+\hlstd{dataPro} \hlkwb{<-} \hlstr{"~/Dropbox/2data/dataProduct"}
+\hlstd{figsDir} \hlkwb{<-} \hlstr{"~/Dropbox/3figs"}
+\hlstd{phd.slice100m}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{,}\hlkwc{v}\hlstd{,}\hlkwc{int}\hlstd{=}\hlnum{100}\hlstd{) \{}
+        \hlcom{## creat slice factors}
+        \hlstd{intervals}  \hlkwb{<-} \hlkwd{as.numeric}\hlstd{()}
+        \hlcom{## TODO power     <- log(10,int)}
+        \hlkwa{for} \hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(v)) \{}
+                \hlkwa{if}\hlstd{(}\hlkwd{round}\hlstd{(v[i],}\hlopt{-}\hlnum{2}\hlstd{)} \hlopt{==} \hlkwd{round}\hlstd{(v[i],}\hlopt{-}\hlnum{1}\hlstd{)) \{}
+                        \hlcom{##intervals[i]  <- round(v[i],-2)%/%int}
+                        \hlstd{intervals[i]}  \hlkwb{<-} \hlkwd{round}\hlstd{(v[i],}\hlopt{-}\hlnum{2}\hlstd{)}
+                \hlstd{\}} \hlkwa{else} \hlstd{\{}
+                        \hlstd{intervals[i]} \hlkwb{<-} \hlnum{NA}
+                \hlstd{\}}
+        \hlstd{\}}
+        \hlstd{df}\hlopt{$}\hlstd{slice}  \hlkwb{<-} \hlstd{intervals}
+        \hlstd{data}  \hlkwb{<-} \hlkwd{na.omit}\hlstd{(df)}
+        \hlcom{## Delete very rared duplicated case in one slice}
+        \hlstd{undup}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{)\{}
+                \hlstd{df[}\hlopt{!}\hlkwd{duplicated}\hlstd{(df[,}\hlnum{1}\hlstd{]),]} \hlcom{# Careful for ID}
+        \hlstd{\}}
+        \hlstd{data.l}  \hlkwb{<-} \hlkwd{by}\hlstd{(data, data}\hlopt{$}\hlstd{slice, undup)}
+        \hlkwa{if} \hlstd{(}\hlkwd{require}\hlstd{(plyr))\{}
+                \hlstd{data.d}  \hlkwb{<-} \hlkwd{rbind.fill}\hlstd{(data.l)}
+        \hlstd{\}}
+\hlcom{### for voxler soft export}
+        \hlstd{data.d}\hlopt{$}\hlstd{from} \hlkwb{<-} \hlstd{data.d}\hlopt{$}\hlstd{slice} \hlopt{-} \hlnum{50}
+        \hlstd{data.d}\hlopt{$}\hlstd{to} \hlkwb{<-} \hlstd{data.d}\hlopt{$}\hlstd{slice} \hlopt{+} \hlnum{50}
+        \hlkwd{return}\hlstd{(data.d)}
+\hlstd{\}}
+\hlstd{phd.url.table}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{url}\hlstd{,} \hlkwc{table} \hlstd{=} \hlnum{1} \hlstd{) \{}
+        \hlcom{## scrape the table to dataframe from a url website}
+      \hlkwa{if}\hlstd{(}\hlopt{!}\hlkwd{require}\hlstd{(XML))\{}
+              \hlkwd{installed.packages}\hlstd{(}\hlstr{"XML"}\hlstd{)}
+      \hlstd{\}} \hlkwa{else} \hlstd{\{}
+              \hlstd{url.doc} \hlkwb{<-} \hlkwd{htmlParse}\hlstd{(url)}
+              \hlstd{url.l} \hlkwb{<-} \hlkwd{readHTMLTable}\hlstd{(url.doc)}
+              \hlstd{url.d} \hlkwb{<-} \hlstd{url.l[[table]]}
+      \hlstd{\}}
+      \hlkwd{return}\hlstd{(url.d)}
+\hlstd{\}}
+\hlcom{##  # url <- "http://ja.wikipedia.org/wiki/%E5%9C%B0%E7%86%B1%E7%99%BA%E9%9B%BB"}
+\hlcom{### phd.urltable(url,3)}
+\hlstd{phd.write.csv} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{) \{}
+        \hlcom{## write data.frame as csv and rds file into data folder using df name itselt}
+        \hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M%S"}\hlstd{)}
+        \hlstd{csvName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(df)), now,} \hlstr{".csv"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlstd{rdsName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(df)), now,} \hlstr{".Rds"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlkwd{write.table}\hlstd{(df, csvName,} \hlkwc{sep} \hlstd{=} \hlstr{","}\hlstd{,} \hlkwc{quote} \hlstd{= F,} \hlkwc{row.names} \hlstd{= F)}
+        \hlkwd{saveRDS}\hlstd{(df, rdsName)}
+\hlstd{\}}
+\hlstd{phd.write.csv2} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{) \{}
+        \hlcom{## write data.frame as csv and rds file into data folder using df name itselt}
+        \hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M%S"}\hlstd{)}
+        \hlstd{csvName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(df)), now,} \hlstr{".csv"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlstd{rdsName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(df)), now,} \hlstr{".Rds"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlkwd{write.table}\hlstd{(df, csvName,} \hlkwc{sep} \hlstd{=} \hlstr{";"}\hlstd{,} \hlkwc{quote} \hlstd{= F,} \hlkwc{row.names} \hlstd{= F)}
+        \hlkwd{saveRDS}\hlstd{(df, rdsName)}
+\hlstd{\}}
+\hlstd{phd.saveshp.prj} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{obj}\hlstd{) \{}
+        \hlcom{## write obj as shp, rds and csv file}
+        \hlstd{wd}  \hlkwb{<-} \hlkwd{getwd}\hlstd{()}
+        \hlkwa{if}\hlstd{(}\hlopt{!}\hlkwd{file.exists}\hlstd{(}\hlstr{"./data/shp"}\hlstd{)) \{}
+                \hlkwd{dir.create}\hlstd{(}\hlstr{"./data/shp"}\hlstd{,}\hlkwc{recursive} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+        \hlstd{\}}
+        \hlkwd{setwd}\hlstd{(}\hlkwd{paste0}\hlstd{(wd,} \hlstr{"/data/shp"}\hlstd{))}
+        \hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M%S"}\hlstd{)}
+        \hlstd{csvName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now,} \hlstr{".csv"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlstd{rdsName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now,} \hlstr{".Rds"}\hlstd{,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlstd{shpName}  \hlkwb{<-} \hlkwd{paste}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now,} \hlkwc{sep} \hlstd{=} \hlstr{""}\hlstd{)}
+        \hlkwd{write.table}\hlstd{(}\hlkwd{as.data.frame}\hlstd{(obj), csvName,} \hlkwc{sep} \hlstd{=} \hlstr{","}\hlstd{,} \hlkwc{quote} \hlstd{= F,} \hlkwc{row.names} \hlstd{= F)}
+        \hlkwd{saveRDS}\hlstd{(obj, rdsName)}
+        \hlkwa{if}\hlstd{(}\hlkwd{require}\hlstd{(rgdal))\{}
+                \hlkwd{writeOGR}\hlstd{(obj,} \hlkwc{dsn} \hlstd{=} \hlstr{'.'}\hlstd{,} \hlkwc{layer} \hlstd{= shpName,} \hlkwc{driver} \hlstd{=} \hlstr{"ESRI Shapefile"}\hlstd{)}
+        \hlstd{\}}
+        \hlkwd{setwd}\hlstd{(wd)}
+\hlstd{\}}
+\hlstd{phd.saveshp.geo} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{obj}\hlstd{) \{}
+        \hlcom{## write obj as shp, rds and csv file}
+        \hlstd{wd}  \hlkwb{<-} \hlkwd{getwd}\hlstd{()}
+        \hlkwa{if}\hlstd{(}\hlopt{!}\hlkwd{file.exists}\hlstd{(}\hlstr{"./data/shp"}\hlstd{)) \{}
+                \hlkwd{dir.create}\hlstd{(}\hlstr{"./data/shp"}\hlstd{,}\hlkwc{recursive} \hlstd{=} \hlnum{TRUE}\hlstd{)}
+        \hlstd{\}}
+        \hlkwd{setwd}\hlstd{(}\hlkwd{paste0}\hlstd{(wd,} \hlstr{"/data/shp"}\hlstd{))}
+        \hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M%S"}\hlstd{)}
+        \hlstd{csvName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now,} \hlstr{".csv"}\hlstd{)}
+        \hlstd{rdsName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now,} \hlstr{".Rds"}\hlstd{)}
+        \hlstd{shpName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now)}
+        \hlstd{kmlName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(obj)), now)}
+        \hlstd{kmlDsn}  \hlkwb{<-}  \hlkwd{paste0}\hlstd{(}\hlstr{"./"}\hlstd{, kmlName,} \hlstr{".kml"}\hlstd{)}
+        \hlkwd{write.table}\hlstd{(}\hlkwd{as.data.frame}\hlstd{(obj), csvName,} \hlkwc{sep} \hlstd{=} \hlstr{","}\hlstd{,} \hlkwc{quote} \hlstd{= F,} \hlkwc{row.names} \hlstd{= F)}
+        \hlkwd{saveRDS}\hlstd{(obj, rdsName)}
+        \hlkwa{if}\hlstd{(}\hlkwd{require}\hlstd{(rgdal))\{}
+                \hlkwd{writeOGR}\hlstd{(obj,} \hlkwc{dsn} \hlstd{=} \hlstr{'.'}\hlstd{,} \hlkwc{layer} \hlstd{= shpName,} \hlkwc{driver} \hlstd{=} \hlstr{"ESRI Shapefile"}\hlstd{)}
+                \hlkwd{writeOGR}\hlstd{(obj,} \hlkwc{dsn} \hlstd{= kmlDsn,} \hlkwc{layer} \hlstd{= kmlName,} \hlkwc{driver} \hlstd{=} \hlstr{"KML"}\hlstd{)}
+        \hlstd{\}}
+        \hlkwd{setwd}\hlstd{(wd)}
+\hlstd{\}}
+\hlstd{phd.ggsave} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{name}\hlstd{) \{}
+        \hlcom{## write data.frame as csv and rds file into data folder using df name itselt}
+\hlstd{wd}  \hlkwb{<-} \hlkwd{getwd}\hlstd{()}
+\hlkwd{setwd}\hlstd{(}\hlkwd{paste0}\hlstd{(wd,}\hlstr{"/ggsave"}\hlstd{))}
+\hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M%S"}\hlstd{)}
+\hlcom{## eps/ps, tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (windows only).}
+\hlstd{pngName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(name)), now,} \hlstr{".png"}\hlstd{)}
+\hlstd{tifName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(name)), now,} \hlstr{".tiff"}\hlstd{)}
+\hlstd{pdfName}  \hlkwb{<-} \hlkwd{paste0}\hlstd{(}\hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(name)), now,} \hlstr{".pdf"}\hlstd{)}
+\hlkwd{ggsave}\hlstd{(pngName)}
+\hlkwd{ggsave}\hlstd{(tifName)}
+\hlkwd{ggsave}\hlstd{(pdfName)}
+\hlkwd{setwd}\hlstd{(wd)}
+\hlstd{\}}
+
+\hlstd{phd.fishnet}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x1}\hlstd{,}\hlkwc{x2}\hlstd{,}\hlkwc{y1}\hlstd{,}\hlkwc{y2}\hlstd{,}\hlkwc{rx}\hlstd{=}\hlnum{1000}\hlstd{,}\hlkwc{ry}\hlstd{=rx) \{}
+        \hlstd{x.range.v} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlkwd{as.numeric}\hlstd{(x1),}\hlkwd{as.numeric}\hlstd{(x2),}\hlkwc{by} \hlstd{= rx)}
+        \hlstd{y.range.v} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlkwd{as.numeric}\hlstd{(y1),}\hlkwd{as.numeric}\hlstd{(y2),}\hlkwc{by} \hlstd{= ry)}
+        \hlstd{grid.m}    \hlkwb{<-} \hlkwd{outer}\hlstd{(x.range.v, y.range.v, paste,} \hlkwc{sep} \hlstd{=} \hlstr{","}\hlstd{)}
+        \hlstd{grid.v}    \hlkwb{<-} \hlkwd{as.vector}\hlstd{(grid.m)}
+        \hlstd{grid.d}    \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(grid.v)}
+        \hlstd{fishnet.d} \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwd{do.call}\hlstd{(}\hlstr{'rbind'}\hlstd{,} \hlkwd{strsplit}\hlstd{(}\hlkwd{as.character}\hlstd{(grid.d[,}\hlnum{1}\hlstd{]),} \hlstr{','}\hlstd{,} \hlkwc{fixed}\hlstd{=}\hlnum{TRUE}\hlstd{)))}
+        \hlkwd{colnames}\hlstd{(fishnet.d)}  \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"x"}\hlstd{,}\hlstr{"y"}\hlstd{)}
+\hlstd{\}}
+
+\hlstd{phd.crsTransfer}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{,} \hlkwc{x}\hlstd{,} \hlkwc{y}\hlstd{,} \hlkwc{xName}\hlstd{,} \hlkwc{yName}\hlstd{,} \hlkwc{fromCRS}\hlstd{,} \hlkwc{toCRS}\hlstd{) \{}
+      \hlcom{### 140510 transfer CRS in a dataframe fromat, x, y will be repaced in data.frame}
+       \hlstd{df}\hlopt{$}\hlstd{x}  \hlkwb{<-} \hlstd{df[,}\hlkwd{which}\hlstd{(}\hlkwd{colnames}\hlstd{(df)} \hlopt{==} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(x)))]}
+       \hlstd{df}\hlopt{$}\hlstd{y}  \hlkwb{<-} \hlstd{df[,}\hlkwd{which}\hlstd{(}\hlkwd{colnames}\hlstd{(df)} \hlopt{==} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(y)))]}
+      \hlkwd{library}\hlstd{(sp)}
+      \hlkwd{library}\hlstd{(rgdal)}
+      \hlkwd{coordinates}\hlstd{(df)}  \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"x"}\hlstd{,} \hlstr{"y"}\hlstd{)}
+      \hlkwd{proj4string}\hlstd{(df)}  \hlkwb{<-} \hlkwd{CRS}\hlstd{(fromCRS)}
+      \hlstd{df} \hlkwb{<-} \hlkwd{spTransform}\hlstd{(df,}\hlkwd{CRS}\hlstd{(toCRS))}
+      \hlstd{df} \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(df)}
+      \hlkwd{names}\hlstd{(df)[}\hlkwd{which}\hlstd{(}\hlkwd{names}\hlstd{(df)} \hlopt{==} \hlstr{"x"}\hlstd{)]} \hlkwb{<-} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(xName))}
+      \hlkwd{names}\hlstd{(df)[}\hlkwd{which}\hlstd{(}\hlkwd{names}\hlstd{(df)} \hlopt{==} \hlstr{"y"}\hlstd{)]} \hlkwb{<-} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(yName))}
+      \hlkwd{return}\hlstd{(df)}
+    \hlstd{\}}
+    \hlstd{phd.wraplm} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{lm}\hlstd{) \{}
+      \hlcom{#wrap a lm resuts to data frame format}
+      \hlstd{cf} \hlkwb{<-} \hlkwd{coef}\hlstd{(lm)}
+      \hlstd{tinfo} \hlkwb{<-} \hlkwd{summary}\hlstd{(lm)}\hlopt{$}\hlstd{coefficients[}\hlnum{2}\hlstd{,} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{4}\hlstd{)]}
+      \hlstd{r2} \hlkwb{<-} \hlkwd{summary}\hlstd{(lm)}\hlopt{$}\hlstd{r.squared}
+      \hlkwd{data.frame}\hlstd{(}\hlkwc{intercept} \hlstd{= cf[}\hlnum{1}\hlstd{],} \hlkwc{slope} \hlstd{= cf[}\hlnum{2}\hlstd{],} \hlkwc{n} \hlstd{=} \hlkwd{length}\hlstd{(}\hlkwd{resid}\hlstd{(lm)),}
+                 \hlkwc{slope.se} \hlstd{= tinfo[}\hlnum{1}\hlstd{],} \hlkwc{pval} \hlstd{= tinfo[}\hlnum{2}\hlstd{],} \hlkwc{Rsq} \hlstd{= r2)}
+    \hlstd{\}}
+    \hlcom{#20140524}
+\hlstd{phd.voxler.collars}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{ID}\hlstd{,} \hlkwc{Easting}\hlstd{,} \hlkwc{Northing}\hlstd{,} \hlkwc{Elevation}\hlstd{,} \hlkwc{Azimuth} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{Dip} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{Depth}\hlstd{) \{}
+      \hlstd{ID}  \hlkwb{<-} \hlstd{ID}
+      \hlstd{well}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(ID)}
+      \hlstd{well}\hlopt{$}\hlstd{Easting}  \hlkwb{<-} \hlstd{Easting}
+      \hlstd{well}\hlopt{$}\hlstd{Northing}  \hlkwb{<-} \hlstd{Northing}
+      \hlstd{well}\hlopt{$}\hlstd{Elevation}  \hlkwb{<-} \hlstd{Elevation}
+      \hlstd{well}\hlopt{$}\hlstd{Azimuth}  \hlkwb{<-} \hlstd{Azimuth}
+      \hlstd{well}\hlopt{$}\hlstd{Dip}  \hlkwb{<-} \hlstd{Dip}
+      \hlstd{well}\hlopt{$}\hlstd{Depth}  \hlkwb{<-} \hlstd{Depth}
+      \hlstd{well[}\hlkwd{sort}\hlstd{(well}\hlopt{$}\hlstd{ID),]}
+      \hlkwd{return}\hlstd{(well)}
+    \hlstd{\}}
+\hlstd{phd.voxler.trajectories}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{ID}\hlstd{,} \hlkwc{MD}\hlstd{,} \hlkwc{Azimuth} \hlstd{=} \hlnum{0}\hlstd{,} \hlkwc{Inclination} \hlstd{=} \hlnum{0}\hlstd{) \{}
+      \hlstd{ID}  \hlkwb{<-} \hlstd{ID}
+      \hlstd{well}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(ID)}
+      \hlstd{well}\hlopt{$}\hlstd{MD}  \hlkwb{<-} \hlstd{MD}
+      \hlstd{well}\hlopt{$}\hlstd{Azimuth}  \hlkwb{<-} \hlstd{Azimuth}
+      \hlstd{well}\hlopt{$}\hlstd{Inclination}  \hlkwb{<-} \hlstd{Inclination}
+      \hlstd{well[}\hlkwd{sort}\hlstd{(well}\hlopt{$}\hlstd{ID),]}
+      \hlkwd{return}\hlstd{(well)}
+    \hlstd{\}}
+\hlstd{phd.voxler.samples}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{ID}\hlstd{,} \hlkwc{From}\hlstd{,} \hlkwc{To}\hlstd{,} \hlkwc{V1}\hlstd{,} \hlkwc{...}\hlstd{) \{}
+      \hlstd{ID}  \hlkwb{<-} \hlstd{ID}
+      \hlstd{well}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(ID)}
+      \hlcom{## From to can get from phd.slice100m}
+      \hlstd{well}\hlopt{$}\hlstd{From}  \hlkwb{<-} \hlstd{From}
+      \hlstd{well}\hlopt{$}\hlstd{To}  \hlkwb{<-} \hlstd{To}
+      \hlstd{well}\hlopt{$}\hlstd{V1}  \hlkwb{<-} \hlstd{V1}
+      \hlstd{well[}\hlkwd{sort}\hlstd{(well}\hlopt{$}\hlstd{ID),]}
+      \hlkwd{return}\hlstd{(well)}
+    \hlstd{\}}
+    \hlcom{## Add linear function and R2 on the line in ggplot}
+    \hlcom{#http://stackoverflow.com/questions/7549694/ggplot2-adding-regression-line-equation-and-r2-on-graph/7549819#7549819}
+\hlstd{lm_eqn} \hlkwb{=} \hlkwa{function}\hlstd{(}\hlkwc{m}\hlstd{) \{}
+
+        \hlstd{l} \hlkwb{<-} \hlkwd{list}\hlstd{(}\hlkwc{a} \hlstd{=} \hlkwd{format}\hlstd{(}\hlkwd{coef}\hlstd{(m)[}\hlnum{1}\hlstd{],} \hlkwc{digits} \hlstd{=} \hlnum{2}\hlstd{),}
+                  \hlkwc{b} \hlstd{=} \hlkwd{format}\hlstd{(}\hlkwd{abs}\hlstd{(}\hlkwd{coef}\hlstd{(m)[}\hlnum{2}\hlstd{]),} \hlkwc{digits} \hlstd{=} \hlnum{2}\hlstd{),}
+                  \hlkwc{r2} \hlstd{=} \hlkwd{format}\hlstd{(}\hlkwd{summary}\hlstd{(m)}\hlopt{$}\hlstd{r.squared,} \hlkwc{digits} \hlstd{=} \hlnum{3}\hlstd{));}
+
+        \hlkwa{if} \hlstd{(}\hlkwd{coef}\hlstd{(m)[}\hlnum{2}\hlstd{]} \hlopt{>=} \hlnum{0}\hlstd{)  \{}
+            \hlstd{eq} \hlkwb{<-} \hlkwd{substitute}\hlstd{(}\hlkwd{italic}\hlstd{(y)} \hlopt{==} \hlstd{a} \hlopt{+} \hlstd{b} \hlopt{%.%} \hlkwd{italic}\hlstd{(x)}\hlopt{*}\hlstr{","}\hlopt{~~}\hlkwd{italic}\hlstd{(r)}\hlopt{^}\hlnum{2}\hlopt{~}\hlstr{"="}\hlopt{~}\hlstd{r2,l)}
+        \hlstd{\}} \hlkwa{else} \hlstd{\{}
+            \hlstd{eq} \hlkwb{<-} \hlkwd{substitute}\hlstd{(}\hlkwd{italic}\hlstd{(y)} \hlopt{==} \hlstd{a} \hlopt{-} \hlstd{b} \hlopt{%.%} \hlkwd{italic}\hlstd{(x)}\hlopt{*}\hlstr{","}\hlopt{~~}\hlkwd{italic}\hlstd{(r)}\hlopt{^}\hlnum{2}\hlopt{~}\hlstr{"="}\hlopt{~}\hlstd{r2,l)}
+        \hlstd{\}}
+
+        \hlkwd{as.character}\hlstd{(}\hlkwd{as.expression}\hlstd{(eq));}
+    \hlstd{\}}
+\hlstd{phd.geocode} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{nameLst}\hlstd{) \{}
+          \hlcom{# get longitude, latitude, and Name of given place}
+          \hlstd{lonlata}  \hlkwb{<-} \hlstd{ggmap::}\hlkwd{geocode}\hlstd{(nameLst,} \hlkwc{output} \hlstd{=} \hlstr{"latlona"}\hlstd{)}
+          \hlstd{names} \hlkwb{<-} \hlkwd{do.call}\hlstd{(}\hlstr{"rbind"}\hlstd{,} \hlkwd{strsplit}\hlstd{(lonlata[,}\hlnum{3}\hlstd{],} \hlstr{","}\hlstd{))}
+          \hlstd{name}  \hlkwb{<-} \hlstd{Hmisc::}\hlkwd{capitalize}\hlstd{(names[,}\hlnum{1}\hlstd{])}
+          \hlstd{lonlatn}  \hlkwb{<-} \hlkwd{cbind}\hlstd{(lonlata[,}\hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{2}\hlstd{)], name)}
+          \hlkwd{return}\hlstd{(lonlatn)}
+
+  \hlstd{\}}
+
+\hlstd{phd.spatialize.wgs84} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{df}\hlstd{,} \hlkwc{x}\hlstd{,} \hlkwc{y}\hlstd{) \{}
+         \hlcom{# spatialize a data frame to spdf}
+         \hlstd{d}  \hlkwb{<-} \hlstd{df}
+         \hlstd{d}\hlopt{$}\hlstd{x}  \hlkwb{<-} \hlstd{d[,}\hlkwd{which}\hlstd{(}\hlkwd{colnames}\hlstd{(d)} \hlopt{==} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(x)))]}
+         \hlstd{d}\hlopt{$}\hlstd{y}  \hlkwb{<-} \hlstd{d[,}\hlkwd{which}\hlstd{(}\hlkwd{colnames}\hlstd{(d)} \hlopt{==} \hlkwd{as.character}\hlstd{(}\hlkwd{substitute}\hlstd{(y)))]}
+         \hlstd{wgs84GRS} \hlkwb{<-} \hlstr{"+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"}
+         \hlstd{coords}  \hlkwb{<-} \hlstd{d[,} \hlkwd{c}\hlstd{(}\hlstr{"x"}\hlstd{,}\hlstr{"y"}\hlstd{)]}
+         \hlstd{m}  \hlkwb{<-} \hlkwd{as.matrix}\hlstd{(coords)} \hlcom{#sp need numeric matrix}
+         \hlkwd{mode}\hlstd{(m)}  \hlkwb{<-} \hlstr{"numeric"}
+         \hlstd{sp}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPoints}\hlstd{(m,} \hlkwc{proj4string} \hlstd{= sp::}\hlkwd{CRS}\hlstd{(wgs84GRS))}
+         \hlstd{spdf} \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPointsDataFrame}\hlstd{(m,} \hlkwc{data} \hlstd{= d,} \hlkwc{proj4string}\hlstd{=sp::}\hlkwd{CRS}\hlstd{(wgs84GRS))}
+         \hlkwd{return}\hlstd{(spdf)}
+  \hlstd{\}}
+\hlstd{phd.bbox} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{xmin}\hlstd{,}\hlkwc{xmax}\hlstd{,}\hlkwc{ymin}\hlstd{,}\hlkwc{ymax}\hlstd{,}\hlkwc{crs} \hlstd{=} \hlnum{NA}\hlstd{)\{}
+        \hlcom{### Make a bbox rect SPDF from LL and TR point.}
+        \hlstd{Polygon}  \hlkwb{<-} \hlstd{sp::}\hlkwd{Polygon}\hlstd{(}\hlkwd{cbind}\hlstd{(}\hlkwd{c}\hlstd{(xmin, xmin, xmax, xmax, xmin),}
+                           \hlkwd{c}\hlstd{(ymin, ymax, ymax, ymin, ymin)))}
+        \hlstd{Polygons}  \hlkwb{<-} \hlstd{sp::}\hlkwd{Polygons}\hlstd{(}\hlkwd{list}\hlstd{(Polygon),} \hlnum{1}\hlstd{)} \hlcom{#ID for row.names = 1}
+        \hlstd{SP}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPolygons}\hlstd{(}\hlkwd{list}\hlstd{(Polygons))}
+        \hlstd{data_d}  \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{name} \hlstd{=} \hlstr{"bbox"}\hlstd{,} \hlkwc{row.names}\hlstd{=} \hlkwd{row.names}\hlstd{(Polygons))}
+        \hlstd{SPDF}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPolygonsDataFrame}\hlstd{(SP,} \hlkwc{data} \hlstd{= data_d)}
+        \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF)}  \hlkwb{<-} \hlstd{crs}
+        \hlkwd{return}\hlstd{(SPDF)}
+\hlstd{\}}
+\hlstd{phd.grid}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{SPDF}\hlstd{,}\hlkwc{x}\hlstd{,} \hlkwc{y} \hlstd{= x,} \hlkwc{type} \hlstd{=} \hlstr{"regular"}\hlstd{)\{}
+        \hlstd{sp}  \hlkwb{<-} \hlstd{sp::}\hlkwd{spsample}\hlstd{(SPDF,}\hlkwc{type} \hlstd{= type,} \hlkwc{cellsize} \hlstd{=} \hlkwd{c}\hlstd{(x,y),} \hlkwc{offset} \hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0.5}\hlstd{,} \hlnum{0.5}\hlstd{))}
+        \hlstd{df}  \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwc{id} \hlstd{=} \hlkwd{as.factor}\hlstd{(}\hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(sp)))}
+        \hlstd{spdf}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPointsDataFrame}\hlstd{(sp,} \hlkwc{data} \hlstd{= df)}
+\hlstd{\}}
+
+\hlstd{phd.sp2SPDF}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{sp}\hlstd{) \{}
+        \hlstd{df}  \hlkwb{<-} \hlkwd{data.frame}\hlstd{(}\hlkwd{as.factor}\hlstd{(}\hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(sp)))}
+        \hlstd{spdf} \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPointsDataFrame}\hlstd{(sp, df)}
+        \hlstd{grd}  \hlkwb{<-} \hlstd{spdf}
+        \hlstd{sp::}\hlkwd{gridded}\hlstd{(grd)}  \hlkwb{<-} \hlnum{TRUE}
+        \hlstd{grd_SPDF}  \hlkwb{<-} \hlkwd{as}\hlstd{(grd,} \hlstr{"SpatialPolygonsDataFrame"}\hlstd{)}
+        \hlkwd{return}\hlstd{(grd_SPDF)}
+\hlstd{\}}
+
+\hlstd{phd.spdf2SPDF}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{spdf}\hlstd{) \{}
+        \hlstd{grd}  \hlkwb{<-} \hlstd{spdf}
+        \hlstd{sp::}\hlkwd{gridded}\hlstd{(grd)}  \hlkwb{<-} \hlnum{TRUE}
+        \hlstd{grd_SPDF}  \hlkwb{<-} \hlkwd{as}\hlstd{(grd,} \hlstr{"SpatialPolygonsDataFrame"}\hlstd{)}
+        \hlkwd{return}\hlstd{(grd_SPDF)}
+\hlstd{\}}
+
+\hlstd{phd.bigpolys}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{,} \hlkwc{area}\hlstd{)\{}
+        \hlstd{polys} \hlkwb{<-} \hlkwd{lapply}\hlstd{(x}\hlopt{@}\hlkwc{polygons} \hlstd{, slot ,} \hlstr{"Polygons"} \hlstd{)}
+        \hlstd{area_fun}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{y}\hlstd{) \{}
+           \hlkwd{sapply}\hlstd{(y}\hlopt{@}\hlkwc{Polygons}\hlstd{,} \hlkwa{function}\hlstd{(}\hlkwc{z}\hlstd{) z}\hlopt{@}\hlkwc{area}\hlstd{)}
+        \hlstd{\}}
+        \hlstd{areas_l} \hlkwb{<-} \hlkwd{lapply}\hlstd{(x}\hlopt{@}\hlkwc{polygons}\hlstd{, area_fun)}
+        \hlstd{bigpolys} \hlkwb{<-} \hlkwd{sapply}\hlstd{(areas_l,} \hlkwa{function}\hlstd{(}\hlkwc{a}\hlstd{)} \hlkwd{which}\hlstd{(a} \hlopt{>} \hlstd{area))}
+        \hlkwd{return}\hlstd{(bigpolys)}
+\hlstd{\}}
+\hlstd{phd.kml2spdf}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{kml}\hlstd{,} \hlkwc{name} \hlstd{=} \hlnum{FALSE}\hlstd{)\{}
+  \hlcom{### Extracting Information from Kml to Dataframe [2014-06-26 Thu]}
+        \hlstd{cha} \hlkwb{<-} \hlkwd{readLines}\hlstd{(kml)}
+        \hlstd{doc} \hlkwb{<-} \hlstd{XML::}\hlkwd{htmlParse}\hlstd{(cha)}   \hlcom{# xmlParse not work here!!!}
+        \hlstd{nod} \hlkwb{<-} \hlstd{XML::}\hlkwd{xpathApply}\hlstd{(doc,} \hlstr{"//description"}\hlstd{)}
+        \hlstd{des_d}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(}\hlkwd{t}\hlstd{(}\hlkwd{sapply}\hlstd{(nod,} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{)}\hlkwd{unname}\hlstd{(XML::}\hlkwd{xmlSApply}\hlstd{(x, XML::xmlValue)))))}
+        \hlstd{xy_l}  \hlkwb{<-} \hlstd{XML::}\hlkwd{xpathSApply}\hlstd{(doc,}  \hlstr{"//coordinates"}\hlstd{, XML::xmlValue)}
+        \hlstd{xy_d}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(}\hlkwd{do.call}\hlstd{(}\hlstr{"rbind"}\hlstd{,} \hlkwd{strsplit}\hlstd{(xy_l,}\hlstr{","}\hlstd{)))}
+        \hlkwd{names}\hlstd{(xy_d)}  \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlstr{"lon"}\hlstd{,}\hlstr{"lat"}\hlstd{)}
+        \hlkwa{if} \hlstd{(name) \{}
+                \hlcom{### for same bad structure of KML}
+                \hlstd{name_d}  \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(XML::}\hlkwd{xpathSApply}\hlstd{(doc,}  \hlstr{"//name"}\hlstd{, XML::xmlValue))}
+                \hlkwd{names}\hlstd{(name_d)}  \hlkwb{<-} \hlstr{"Name"}
+                \hlstd{kml_d}  \hlkwb{<-} \hlkwd{cbind}\hlstd{(name_d, xy_d, des_d)\}}
+        \hlkwa{else}
+                \hlstd{kml_d}  \hlkwb{<-} \hlkwd{cbind}\hlstd{(xy_d, des_d)}
+        \hlstd{kml_d}  \hlkwb{<-} \hlstd{kml_d[,} \hlkwd{colSums}\hlstd{(kml_d} \hlopt{!=} \hlstr{""}\hlstd{)} \hlopt{!=} \hlnum{0}\hlstd{]} \hlcom{## Clear Empty Column}
+        \hlstd{coords}  \hlkwb{<-} \hlstd{kml_d[,} \hlkwd{c}\hlstd{(}\hlstr{"lon"}\hlstd{,}\hlstr{"lat"}\hlstd{)]}
+        \hlstd{coords_m}  \hlkwb{<-} \hlkwd{as.matrix}\hlstd{(coords)} \hlcom{#sp need numeric matrix}
+        \hlkwd{mode}\hlstd{(coords_m)}  \hlkwb{<-} \hlstr{"numeric"}
+        \hlkwd{options}\hlstd{(}\hlkwc{digits}\hlstd{=}\hlnum{15}\hlstd{)}  \hlcom{#based on orgin data}
+        \hlstd{kml_sp}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPoints}\hlstd{(coords_m,} \hlkwc{proj4string} \hlstd{= sp::}\hlkwd{CRS}\hlstd{(wgs84GRS))}
+        \hlstd{kml_spdf} \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPointsDataFrame}\hlstd{(coords_m,} \hlkwc{data} \hlstd{=kml_d,} \hlkwc{proj4string}\hlstd{=sp::}\hlkwd{CRS}\hlstd{(wgs84GRS))}
+        \hlkwd{return}\hlstd{(kml_spdf)}
+        \hlcom{#phd.saveshp.geo(kml_spdf)}
+\hlstd{\}}
+\hlstd{phd.largestPolys}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{SPDF}\hlstd{,} \hlkwc{Polygon} \hlstd{=} \hlnum{FALSE}\hlstd{,} \hlkwc{Polygons} \hlstd{=} \hlnum{FALSE}\hlstd{) \{}
+        \hlcom{### TODO: lvl = match.type("Polygons", "Polygon", "polygons")}
+        \hlcom{### Extract Largest Polygons(Layer) from SPDF to SPDF1 08-14}
+        \hlkwa{if} \hlstd{(}\hlkwd{class}\hlstd{(SPDF)[}\hlnum{1}\hlstd{]} \hlopt{!=} \hlstr{"SpatialPolygonsDataFrame"}\hlstd{)}
+        \hlkwd{stop}\hlstd{(}\hlstr{"Must be a SpatialPolygonsDataFrame object"}\hlstd{)}
+        \hlstd{crs}  \hlkwb{<-} \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF)}
+        \hlstd{areas_Polygons}  \hlkwb{<-}  \hlkwd{sapply}\hlstd{(SPDF}\hlopt{@}\hlkwc{polygons}\hlstd{,} \hlkwa{function}\hlstd{(}\hlkwc{Polygons}\hlstd{) Polygons}\hlopt{@}\hlkwc{area}\hlstd{)}
+        \hlstd{id_Polygons}  \hlkwb{<-} \hlkwd{which.max}\hlstd{(areas_Polygons)}
+        \hlstd{SPDF1}  \hlkwb{<-} \hlstd{SPDF[id_Polygons,]}
+        \hlcom{### Extract Largest Polygon to SPDF2}
+        \hlstd{area_fun}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{polygons}\hlstd{) \{}
+                \hlkwd{sapply}\hlstd{(polygons}\hlopt{@}\hlkwc{Polygons}\hlstd{,} \hlkwa{function}\hlstd{(}\hlkwc{Polygon}\hlstd{) Polygon}\hlopt{@}\hlkwc{area}\hlstd{)}
+                \hlstd{\}}
+        \hlstd{areas_Polygon} \hlkwb{<-} \hlkwd{lapply}\hlstd{(SPDF}\hlopt{@}\hlkwc{polygons}\hlstd{, area_fun)}
+        \hlstd{mx_Polygons} \hlkwb{<-} \hlstd{areas_Polygon[[id_Polygons]]}
+        \hlstd{id_Polygon}  \hlkwb{<-} \hlkwd{which.max}\hlstd{(mx_Polygons)}
+        \hlstd{mx_Polygon}  \hlkwb{<-} \hlstd{SPDF}\hlopt{@}\hlkwc{polygons}\hlstd{[[id_Polygons]]}\hlopt{@}\hlkwc{Polygons}\hlstd{[[id_Polygon]]}
+        \hlstd{toPolygons}  \hlkwb{<-} \hlstd{sp::}\hlkwd{Polygons}\hlstd{(}\hlkwd{list}\hlstd{(mx_Polygon), id_Polygon)} \hlcom{#ID for row.names = 1}
+        \hlstd{toSP}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPolygons}\hlstd{(}\hlkwd{list}\hlstd{(toPolygons))}
+        \hlstd{SPDF2}  \hlkwb{<-} \hlkwd{as}\hlstd{(toSP,} \hlstr{"SpatialPolygonsDataFrame"}\hlstd{)}
+        \hlcom{### Extract Largest Polygon in each Polygons to SPDF3}
+        \hlstd{ids_mxpolys} \hlkwb{<-} \hlkwd{lapply}\hlstd{(areas_Polygon,} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{)} \hlkwd{which.max}\hlstd{(x))}
+        \hlstd{Polygons_l}  \hlkwb{<-} \hlkwd{list}\hlstd{()}
+        \hlkwa{for} \hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(ids_mxpolys)) \{}
+             \hlstd{Polygons_l[[i]]} \hlkwb{<-} \hlstd{SPDF}\hlopt{@}\hlkwc{polygons}\hlstd{[[i]]}\hlopt{@}\hlkwc{Polygons}\hlstd{[[ids_mxpolys[[i]]]]}
+        \hlstd{\}}
+        \hlstd{toPolygons}  \hlkwb{<-} \hlstd{sp::}\hlkwd{Polygons}\hlstd{(Polygons_l,} \hlnum{1}\hlstd{)} \hlcom{#ID for row.names = 1}
+        \hlstd{toSP}  \hlkwb{<-} \hlstd{sp::}\hlkwd{SpatialPolygons}\hlstd{(}\hlkwd{list}\hlstd{(toPolygons))}
+        \hlstd{SPDF3}  \hlkwb{<-} \hlkwd{as}\hlstd{(toSP,} \hlstr{"SpatialPolygonsDataFrame"}\hlstd{)}
+        \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF1)}  \hlkwb{<-} \hlstd{crs}
+        \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF2)}  \hlkwb{<-} \hlstd{crs}
+        \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF3)}  \hlkwb{<-} \hlstd{crs}
+        \hlkwa{if} \hlstd{(Polygons) \{}
+                \hlkwd{return}\hlstd{(SPDF3)}
+        \hlstd{\}} \hlkwa{else if} \hlstd{(Polygon) \{}
+                \hlkwd{return}\hlstd{(SPDF2)}
+        \hlstd{\}} \hlkwa{else} \hlstd{\{}
+                \hlkwd{return}\hlstd{(SPDF1)}
+        \hlstd{\}}
+
+\hlstd{\}}
+\hlcom{###sp::plot(phd.largestPolys(jp1, Polygons = TRUE))}
+\hlstd{phd.selectPolys}  \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{SPDF}\hlstd{,} \hlkwc{area}\hlstd{) \{}
+        \hlcom{### Extract Polygons(Layer) by Area to SPDF1}
+        \hlstd{crs}  \hlkwb{<-} \hlstd{sp::}\hlkwd{proj4string}\hlstd{(SPDF)}
+        \hlstd{areas_Polygons}  \hlkwb{<-}  \hlkwd{sapply}\hlstd{(SPDF}\hlopt{@}\hlkwc{polygons}\hlstd{,} \hlkwa{function}\hlstd{(}\hlkwc{Polygons}\hlstd{) Polygons}\hlopt{@}\hlkwc{area}\hlstd{)}
+        \hlstd{ids_polygons}  \hlkwb{<-} \hlkwd{which}\hlstd{(areas_Polygons} \hlopt{>=} \hlstd{area)}
+        \hlstd{SPDF1}  \hlkwb{<-} \hlstd{SPDF[ids_polygons,]}
+\hlstd{\}}
+\hlcom{##SP::plot(phd.selectPolys(SPDF,1))}
+\hlstd{phd.getGoogleMap} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{lon}\hlstd{,} \hlkwc{lat}\hlstd{,} \hlkwc{zoom}\hlstd{,} \hlkwc{prefix} \hlstd{=} \hlstr{"google"}\hlstd{)\{}
+        \hlcom{### ggmap 4 type of google map and save to Rds 08-15}
+        \hlkwd{require}\hlstd{(ggmap)}
+        \hlstd{x}  \hlkwb{<-} \hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(lon))}
+        \hlstd{y}  \hlkwb{<-} \hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(lat))}
+        \hlstd{z}  \hlkwb{<-} \hlkwd{deparse}\hlstd{(}\hlkwd{substitute}\hlstd{(zoom))}
+        \hlstd{now} \hlkwb{<-} \hlkwd{format}\hlstd{(}\hlkwd{Sys.time}\hlstd{(),} \hlstr{"_%y%m%d_%H%M"}\hlstd{)}
+        \hlkwa{for} \hlstd{(i} \hlkwa{in} \hlkwd{c}\hlstd{(}\hlstr{"terrain"}\hlstd{,} \hlstr{"satellite"}\hlstd{,} \hlstr{"roadmap"}\hlstd{,} \hlstr{"hybrid"}\hlstd{))\{}
+                \hlstd{fileName}  \hlkwb{<-}  \hlkwd{paste0}\hlstd{(prefix,}\hlstr{"_google_"}\hlstd{, i,}\hlstr{"_"}\hlstd{,x,}\hlstr{"_"}\hlstd{,y,}\hlstr{"_zoom"}\hlstd{, z, now,} \hlstr{".Rds"}\hlstd{)}
+                \hlstd{file}  \hlkwb{<-} \hlkwd{get_googlemap}\hlstd{(}\hlkwc{center} \hlstd{=} \hlkwd{c}\hlstd{(}\hlkwc{lon} \hlstd{= lon,} \hlkwc{lat} \hlstd{= lat),} \hlkwc{zoom} \hlstd{= zoom,}
+                             \hlkwc{maptype} \hlstd{= i,} \hlkwc{filename} \hlstd{= fileName)}
+                \hlkwd{saveRDS}\hlstd{(file,} \hlkwc{file} \hlstd{= fileName)}
+         \hlstd{\}}
+\hlstd{\}}
+\hlcom{## phd.getGoogleMap(142.5, 43.5, 7, "hkd")}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{appendices}
+
+
+
+%% Index ---------------------------------------------------------------------
+\printthesisindex % If index is present
+
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{APPENDIX/appendix}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{INDEX/index}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{FIGURES/figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{CV/cv}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% \input or \include{RESUME/resume}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

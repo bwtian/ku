@@ -1,0 +1,67 @@
+* Abstract 
+  Maximum  of the utilization  of sustainable  and recyclable  energy sources could  be an effective  way for the reduction  of carbon  dioxide  emission,  which  is mainly caused by energy consumption.  In this study, the characterization  of the heat  stored  underground  and  the  analysis  of  the  deep  geothermal  potential  was performed  for  different  geothermal  systems  based  on various geology  structures, fault zones and volcanic zones, including Hokkaido, Northeast of Honshu, Center of Honshu, Southwest of Honshu, Shikoku,  and Kyushu  geothermal  systems. Geothermal energy potential maps were firstly produced at different depth intervals using two dimension kriging interpolations. The temperature distribution was then modeled in the three dimension to a depth of 1 km from the surface underground.  In addition, the dataset from multi-sourced well loggings was used to improve the accuracy of 3D model and furthermore, predict the geothermal properties. Finally, based on the analysis of the deep geothermal potentials, location of high potential areas where further exploration and future exploitation of the geothermal resources is feasible in Japan were detected.
+  Keywords: Geothermal resource, 3D, Temperature distribution, Upper crust
+* Introduction
+
+#+NAME: fig:study-area  
+#+BEGIN_SRC dot :file ~/Dropbox/3figs/iamg/jpGeothermalSystems.pdf
+digraph {
+    //rankdir=LR; 
+    "Country" -> "Islands" [label = Geography]
+    "Islands" -> "Regions"  [label = Tradition] 
+    "Regions"  -> "Geothermal \n Systems"  [label = "Geology \nVolcanoes"] 
+    {
+    node [shape = box] //group =a ]
+    Japan -> {Hokkaido, Honshu, Shikoku, Kyushu}
+    Honshu -> {Tohoku, Kanto, Chubu, Kansai, Chugoku}
+
+    {Kanto, Chubu} -> "Honshu(CE)"
+    {Kansai, Chugoku} -> "Honshu(SW)"
+    Hokkaido1 [label = Hokkaido]; Hokkaido -> Hokkaido1;
+    Shikoku1 [label = Shikoku]; Shikoku -> Shikoku1;
+    Kyushu1 [label = Kyushu]; Kyushu -> Kyushu1; 
+    edge[ weight = 10] // Make straight Line
+    Tohoku -> "Honshu(NE)"
+    Hokkaido2 [label = Hokkaido]; Hokkaido1 -> Hokkaido2     
+    Shikoku2 [label = Shikoku]; Shikoku1 -> Shikoku2;
+    Kyushu2 [label = Kyushu]; Kyushu1 -> Kyushu2;
+    }
+
+    {
+    node [shape = box, group=b]
+    edge [style = dashed] 
+    Japan -> {Nansei, "Izu-Bonin"} // [constraint =FALSE]
+    }
+   {rank = same; "Hokkaido2","Honshu(NE)", "Honshu(CE)", "Honshu(SW)" "Kyushu2", "Shikoku2"}
+
+}
+
+#+END_SRC
+#+CAPTION: Geothermal Systems of Japan 
+#+RESULTS: fig:study-area
+[[file:~/Dropbox/3figs/iamg/jpGeothermalSystems.pdf]]
+
+
+#+RESULTS:
+* Study Area
+* Data
+* Methods
+#+BEGIN_SRC dot :file ~/Dropbox/3figs/iamg/methodflow.pdf
+digraph {
+    node [shape = box]
+    Data -> "Data \n Subsets" -> Variograms -> Krigings -> Visualization -> Analysis -> Validation // -> "Discussion and \n Conclusion"
+    {rank = same;  "Borehole Temperature Loggings", "3D Grid" ,"2D Grid"}
+    "Borehole Temperature Loggings" -> "All \n Dataset" -> {"One Assumed \n 3D Variogram"} ->  {"3D Kriging with Trend"} -> "3D Blocks" -> "2D LayersA" -> "Cross \n Validation"
+    "3D Grid" ->  {"3D Kriging with Trend"}
+    "Borehole Temperature Loggings" -> "Sliced \n Dataset" -> "Many Fitted \n 2D Variograms" -> {"2D Kriging"} -> "2D LayersB" ->  "Cross \n Validation"
+    "2D Grid" -> "2D Kriging"
+     "Many Fitted \n 2D Variograms" -> {"One Assumed \n 3D Variogram"} [constraint =false]
+     "Cross \n Validation" //-> "Compare two methods"
+
+}
+#+END_SRC
+#+CAPTION: Workflow of Research
+#+RESULTS:
+[[file:~/Dropbox/3figs/iamg/methodflow.pdf]]
+* Result
+* Conclusion

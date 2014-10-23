@@ -1,0 +1,8 @@
+* Chap1 Introduction: Geothermal Remote Sensing: A literature review  <2014-07-31 Thu>--<2014-08-05 Tue>
+
+* Chap2 Background: Geothermal in Japan: A review <2014-08-05 Tue>--<2014-08-10 Sun>
+* Chap3 Paper1geoi: Classification of Geothermal: convention and unconvention <2014-07-31 Thu>--<2014-08-15 Fri>
+* Chap4 Paper2iamg: 3D Modeling<2014-07-31 Thu>--<2014-08-15 Fri> file:./chap4.org
+
+* Chap5 Paper3IEEE: TIR and 3D Modeling<2014-08-15 Fri>--<2014-08-20 Wed>
+* Chap6 Conclusion<2014-08-20 Wed>
