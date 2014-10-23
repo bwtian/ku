@@ -1,3 +1,17 @@
-** R
-** QGIS
-** LaTex
+* R
+** Spatial Data Analysis and Geostatistics
+*** sp 
+*** rgeos
+*** plotKML
+** Make plot and figures
+*** ggplot2
+*** lattice
+*** rasterVis
+* QGIS
+** grass
+** saga
+** 
+* LaTex
+** Template
+** Glossary
+** 
