@@ -2,7 +2,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% \input or \include{OPTIONS/options}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<<knitOptions, child = "~/Dropbox/5opts/knit/knitOptions.Rnw">>=
+<<child = "~/Dropbox/5opts/knit/knitOptions.Rnw">>=
 @
 <<Functions, child = "~/Dropbox/5opts/phdFunctions.Rnw">>=
 @
