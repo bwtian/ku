@@ -14,4 +14,6 @@
 * LaTex
 ** Template
 ** Glossary
-** 
+** Math
+** Table
+
